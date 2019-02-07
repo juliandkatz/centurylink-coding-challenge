@@ -17,10 +17,6 @@
     "url": "https://github.com/juliandkatz/centurylink-coding-challenge/issues"
   },
   "homepage": "https://github.com/juliandkatz/centurylink-coding-challenge#readme",
-  "dependencies": {
-    "express": "^4.16.4"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
