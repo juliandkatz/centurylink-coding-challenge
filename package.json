@@ -1,0 +1,26 @@
+{
+  "name": "centurylink-coding-challenge",
+  "version": "1.0.0",
+  "description": "The purpose of this coding challenge is to test your ability to develop software for the CenturyLink Cloud organization. For this coding challenge, you’re free to use any coding language you’d like.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliandkatz/centurylink-coding-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliandkatz/centurylink-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/juliandkatz/centurylink-coding-challenge#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
