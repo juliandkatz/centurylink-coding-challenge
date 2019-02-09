@@ -14,12 +14,22 @@ app.get('/', function (req, res) {
 })
 
 app.get('/followers/:githubID', async function (req, res) {
-  const output = await routes.getFollowerTree(req.params.githubID, req.query.depth)
+  let output
+  try {
+    output = await routes.getFollowerTree(req.params.githubID, req.query.depth)
+  } catch (error) {
+    res.status(500).json({ error: error.toString() })
+  }
   res.send(output)
 })
 
 app.get('/stargazers/:githubID', async function (req, res) {
-  const output = await routes.getStargazerTree(req.params.githubID, req.query.depth)
+  let output
+  try {
+    output = await routes.getStargazerTree(req.params.githubID, req.query.depth)
+  } catch (error) {
+    res.status(500).json({ error: error.toString() })
+  }
   res.send(output)
 })
 
