@@ -7,13 +7,12 @@ const axios = ax.create({
   baseURL: 'https://api.github.com'
 })
 
-async function getFollowerTree (baseUserID) {
-  const output = { [baseUserID]: {} }
+async function getFollowerTree (baseUserID, levels = 2) {
+  const followersObject = await getFollowersAsObject(baseUserID, levels)
 
-  const followersObject = await getFollowersAsObject(baseUserID, 3)
-  output[baseUserID] = followersObject
-
-  return output
+  return {
+    [baseUserID]: followersObject
+  }
 }
 
 async function getFollowersAsObject (userLogin, counter) {
@@ -37,13 +36,12 @@ async function getFollowersAsObject (userLogin, counter) {
   return followersObject
 }
 
-async function getStargazerTree (baseUserID) {
-  const output = { [baseUserID]: {} }
+async function getStargazerTree (baseUserID, levels = 2) {
+  const stargazersObject = await getStargazersAsObject(baseUserID, levels)
 
-  const stargazersObject = await getStargazersAsObject(baseUserID, 2)
-  output[baseUserID] = stargazersObject
-
-  return output
+  return {
+    [baseUserID]: stargazersObject
+  }
 }
 
 async function getStargazersAsObject (userLogin, counter) {

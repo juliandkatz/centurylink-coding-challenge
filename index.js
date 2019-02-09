@@ -14,12 +14,12 @@ app.get('/', function (req, res) {
 })
 
 app.get('/followers/:githubID', async function (req, res) {
-  const output = await routes.getFollowerTree(req.params.githubID)
+  const output = await routes.getFollowerTree(req.params.githubID, req.query.depth)
   res.send(output)
 })
 
 app.get('/stargazers/:githubID', async function (req, res) {
-  const output = await routes.getStargazerTree(req.params.githubID)
+  const output = await routes.getStargazerTree(req.params.githubID, req.query.depth)
   res.send(output)
 })
 
