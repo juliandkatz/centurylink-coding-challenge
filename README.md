@@ -15,7 +15,7 @@ You can also add `?depth=some-number` as a querystring parameter to change the d
 https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/followers/tpope?depth=2
 ```
 
-I prefer to hit them using `curl`, piping to [jq](https://stedolan.github.io/jq/) for pretty JSON on the command line.
+I prefer to hit them using `curl`, piping to [`jq`](https://stedolan.github.io/jq/) for pretty JSON on the command line.
 
 ```
 curl https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/followers/tpope\?depth\=2 | jq
@@ -23,7 +23,7 @@ curl https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/followers/tpope\
 
 ## To Run Locally
 
-The lambda function is deployed with a GitHub [Personal Access Token](https://github.com/settings/tokens) and username as secrets.  I've included these in my project in an env file that I've told git to ignore.  This file should sit in the root directory of the project and be named `.env`.  It should look like:
+The lambda function is deployed with a GitHub [Personal Access Token](https://github.com/settings/tokens) and username as secrets.  I've included these in my project in an env file that I've told git to ignore.  This file should sit in the root directory of the project and be named [`.env`](https://www.npmjs.com/package/dotenv).  It should look like:
 
 ```
 GITHUB_USERNAME=some-username-here
