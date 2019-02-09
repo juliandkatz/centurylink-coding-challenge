@@ -18,6 +18,7 @@
   "homepage": "https://github.com/juliandkatz/centurylink-coding-challenge#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "serverless-http": "^1.9.0"
   },
