@@ -5,6 +5,7 @@ provider:
   runtime: nodejs8.10
   stage: dev
   region: us-east-1
+  timeout: 15 # default is 6
 
 functions:
   app:
