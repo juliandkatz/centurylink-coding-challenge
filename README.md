@@ -9,7 +9,11 @@ https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/followers/tpope
 https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/stargazers/tpope
 ```
 
-You can also add `?depth=3` as a querystring parameter to change the depth. As in:
+You can also add `?depth=some-number` as a querystring parameter to change the depth. As in:
+
+```
+https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/followers/tpope?depth=2
+```
 
 I prefer to hit them using `curl`, piping to [jq](https://stedolan.github.io/jq/) for pretty JSON on the command line.
 
