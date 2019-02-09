@@ -23,14 +23,14 @@ curl https://ilwphyee2k.execute-api.us-east-1.amazonaws.com/dev/followers/tpope\
 
 ## To Run Locally
 
-The lambda function is deployed with a GitHub [Personal Access Token](https://github.com/settings/tokens) and username as secrets.  I've included these in my project in an env file that is not included in the repo.  This file should sit in the root directory of the project and be named `.env`.  It should look like:
+The lambda function is deployed with a GitHub [Personal Access Token](https://github.com/settings/tokens) and username as secrets.  I've included these in my project in an env file that I've told git to ignore.  This file should sit in the root directory of the project and be named `.env`.  It should look like:
 
 ```
 GITHUB_USERNAME=some-username-here
 GITHUB_ACCESS_TOKEN=some-access-token-here
 ```
 
-With that in place, run `sls offline` to run a local emulation of Lambda and API Gateway.  Then hit the local version with the same routes but a different base url:
+With that in place, run `sls offline` to spin up a local emulation of Lambda and API Gateway.  Then, hit the local version with the same routes but a different base url:
 
 ```
 http://localhost:3000/followers/tpope
