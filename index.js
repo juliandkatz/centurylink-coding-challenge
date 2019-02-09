@@ -3,9 +3,9 @@ const serverless = require('serverless-http')
 const express = require('express')
 
 // local dependencies
-const getFollowerTree = require('./follower-tree.js')
+const routes = require('./routes.js')
 
-// Routes
+// Router
 const app = express()
 
 app.get('/', function (req, res) {
@@ -13,10 +13,12 @@ app.get('/', function (req, res) {
 })
 
 app.get('/followers/:githubID', async function (req, res) {
-  const baseUserID = req.params.githubID
+  const output = await routes.getFollowerTree(req.params.githubID)
+  res.send(output)
+})
 
-  const output = await getFollowerTree(baseUserID)
-
+app.get('/stargazers/:githubID', async function (req, res) {
+  const output = await routes.getStargazerTree(req.params.githubID)
   res.send(output)
 })
 
